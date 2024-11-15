@@ -1,0 +1,13 @@
+.nav_bar,.user_info{
+  display: inline-flex;
+  min-width: 920px;
+  align-items: center;
+  .items > * {
+    margin: 10px 10px;
+    &.user_info{
+      min-width: 600px;
+      justify-content: flex-end;
+      form{ margin-left: 10px;}
+    }
+  }
+}
