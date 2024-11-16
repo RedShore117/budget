@@ -40,9 +40,7 @@
         <hr>
       </div>
     </div>
-    <div id="modal" class="hidden">
-      <turbo-frame id="login_frame"></turbo-frame>
-    </div>
+    <turbo-frame id="login_frame"></turbo-frame>
     <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
     <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
     <%= yield %>
