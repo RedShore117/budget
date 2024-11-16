@@ -1,0 +1,14 @@
+<turbo-frame id="login_frame">
+  <h1>Sign in</h1>
+  <%= form_with url: session_path, method: :post, data: { turbo_frame: "_top" } do |form| %>
+    <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username",
+                         placeholder: "Enter your email address", value: params[:email_address] %><br>
+    <%= form.password_field :password, required: true, autocomplete: "current-password",
+                            placeholder: "Enter your password", maxlength: 72 %><br>
+    <%= form.submit "Sign in" %>
+    <button onclick="document.getElementById('modal').classList.add('hidden')">Cancel</button>
+  <% end %>
+  <br>
+
+  <%= link_to "Forgot password?", new_password_path %>
+</turbo-frame>
